@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuizMaster — En jeu</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/quiz.css" />
+</head>
+<body>
+
+  <!-- TIMEOUT OVERLAY -->
+  <div class="timeout-overlay" id="timeout-overlay">
+    <div class="timeout-msg">⏰ Temps écoulé !</div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="quiz-header">
+    <div class="quiz-header-left">
+      <a href="index.html" class="back-btn" id="btn-back" title="Quitter">←</a>
+      <div class="quiz-meta">
+        <span class="quiz-theme-label">Thème</span>
+        <span class="quiz-theme-name">
+          <span id="quiz-theme-icon"></span>
+          <span id="quiz-theme-name">Quiz</span>
+        </span>
+      </div>
+    </div>
+    <div class="quiz-header-right">
+      <div class="score-display">
+        <span class="score-icon">⭐</span>
+        <span id="score-val">0</span>
+        <span class="score-unit">pts</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-bar-wrap">
+    <div class="progress-labels">
+      <span class="progress-q" id="question-num">Question 1 sur 10</span>
+      <span class="progress-count" id="progress-count">1 / 10</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+    <div class="progress-dots" id="progress-dots"></div>
+  </div>
+
+  <!-- TIMER -->
+  <div class="timer-section">
+    <div class="timer-ring-wrap">
+      <svg class="timer-svg" viewBox="0 0 80 80">
+        <circle class="timer-track" cx="40" cy="40" r="35"/>
+        <circle class="timer-progress" id="timer-progress" cx="40" cy="40" r="35"
+          stroke-dasharray="220" stroke-dashoffset="0"/>
+      </svg>
+      <div class="timer-number" id="timer-number">30</div>
+    </div>
+  </div>
+
+  <!-- QUESTION -->
+  <main class="question-area">
+    <div class="question-num" id="question-num-label">QUESTION 1</div>
+    <div class="question-text" id="question-text">Chargement...</div>
+
+    <!-- ANSWERS -->
+    <div class="answers-grid" id="answers-grid"></div>
+
+    <!-- EXPLANATION -->
+    <div class="explanation-box" id="explanation"></div>
+
+    <!-- NEXT -->
+    <div class="next-wrap">
+      <button class="btn-next" id="btn-next">
+        Question suivante <span>→</span>
+      </button>
+    </div>
+  </main>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/quiz-page.js"></script>
+</body>
+</html>

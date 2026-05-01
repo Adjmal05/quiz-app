@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuizMaster — Le quiz interactif</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/home.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="home-header">
+    <div class="logo">
+      <div class="logo-icon">⚡</div>
+      <span class="logo-text">QuizMaster</span>
+    </div>
+    <nav class="header-nav">
+      <a href="leaderboard.html" class="btn btn-ghost">🏆 Classement</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      6 thèmes · 60 questions · Timer 30s
+    </div>
+    <h1>Testez vos<br /><span>connaissances</span></h1>
+    <p class="hero-subtitle">
+      Un quiz multi-thèmes avec timer, scores en temps réel et tableau des champions.<br />
+      Choisissez votre thème et montrez ce que vous savez !
+    </p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">60</div>
+        <div class="stat-label">Questions</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">6</div>
+        <div class="stat-label">Thèmes</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">30s</div>
+        <div class="stat-label">Par question</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THEMES -->
+  <section class="themes-section">
+    <div class="section-label">Choisissez un thème</div>
+    <div class="themes-grid">
+
+      <div class="theme-card theme-culture animate-fade-up" data-theme="culture">
+        <span class="theme-icon">🌍</span>
+        <div class="theme-name">Culture Générale</div>
+        <div class="theme-desc">Histoire, géographie, arts et littérature du monde entier</div>
+        <div class="theme-meta">
+          <span class="theme-tag">10 questions</span>
+          <span class="theme-tag">Mixte</span>
+          <span class="theme-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="theme-card theme-science animate-fade-up" data-theme="science">
+        <span class="theme-icon">🔬</span>
+        <div class="theme-name">Sciences</div>
+        <div class="theme-desc">Physique, biologie, chimie et astronomie</div>
+        <div class="theme-meta">
+          <span class="theme-tag">10 questions</span>
+          <span class="theme-tag">Intermédiaire</span>
+          <span class="theme-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="theme-card theme-sport animate-fade-up" data-theme="sport">
+        <span class="theme-icon">⚽</span>
+        <div class="theme-name">Sport</div>
+        <div class="theme-desc">Football, JO, tennis et champions du monde</div>
+        <div class="theme-meta">
+          <span class="theme-tag">10 questions</span>
+          <span class="theme-tag">Facile</span>
+          <span class="theme-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="theme-card theme-tech animate-fade-up" data-theme="tech">
+        <span class="theme-icon">💻</span>
+        <div class="theme-name">Technologie</div>
+        <div class="theme-desc">Informatique, IA, internet et innovations</div>
+        <div class="theme-meta">
+          <span class="theme-tag">10 questions</span>
+          <span class="theme-tag">Intermédiaire</span>
+          <span class="theme-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="theme-card theme-geo animate-fade-up" data-theme="geo">
+        <span class="theme-icon">🗺️</span>
+        <div class="theme-name">Géographie</div>
+        <div class="theme-desc">Capitales, pays, reliefs et océans du monde</div>
+        <div class="theme-meta">
+          <span class="theme-tag">10 questions</span>
+          <span class="theme-tag">Facile</span>
+          <span class="theme-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="theme-card theme-cinema animate-fade-up" data-theme="cinema">
+        <span class="theme-icon">🎬</span>
+        <div class="theme-name">Cinéma</div>
+        <div class="theme-desc">Films cultes, réalisateurs et récompenses</div>
+        <div class="theme-meta">
+          <span class="theme-tag">10 questions</span>
+          <span class="theme-tag">Intermédiaire</span>
+          <span class="theme-arrow">→</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MODAL PLAYER NAME -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <h2>Prêt à jouer ? 🎯</h2>
+      <p>Entrez votre pseudo pour sauvegarder votre score dans le classement.</p>
+
+      <div class="input-group">
+        <label for="player-name">Votre pseudo</label>
+        <input
+          type="text"
+          id="player-name"
+          class="input-field"
+          placeholder="Ex : Alex42"
+          maxlength="20"
+          autocomplete="off"
+        />
+      </div>
+
+      <div class="input-group">
+        <label>Thème sélectionné</label>
+        <div id="selected-theme-display" class="selected-theme-display"></div>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="modal-cancel">Annuler</button>
+        <button class="btn btn-primary" id="modal-start">C'est parti ! ⚡</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>

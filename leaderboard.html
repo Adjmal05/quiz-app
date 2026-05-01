@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuizMaster — Classement</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/result.css" />
+</head>
+<body>
+
+  <div class="leaderboard-wrap">
+
+    <div class="lb-header">
+      <div class="lb-trophy-icon">🏆</div>
+      <h1>Tableau des champions</h1>
+      <p>Les meilleurs scores de tous les joueurs</p>
+    </div>
+
+    <a href="index.html" class="lb-back">← Retour à l'accueil</a>
+
+    <!-- FILTERS -->
+    <div class="lb-header-row">
+      <div class="lb-filters" id="lb-filters">
+        <button class="lb-filter-btn active" data-theme="all">🌐 Tous</button>
+        <button class="lb-filter-btn" data-theme="culture">🌍 Culture</button>
+        <button class="lb-filter-btn" data-theme="science">🔬 Sciences</button>
+        <button class="lb-filter-btn" data-theme="sport">⚽ Sport</button>
+        <button class="lb-filter-btn" data-theme="tech">💻 Tech</button>
+        <button class="lb-filter-btn" data-theme="geo">🗺️ Géo</button>
+        <button class="lb-filter-btn" data-theme="cinema">🎬 Cinéma</button>
+      </div>
+      <button class="lb-clear-btn" id="btn-clear">🗑 Effacer</button>
+    </div>
+
+    <!-- PODIUM -->
+    <div id="podium-section"></div>
+
+    <!-- TABLE -->
+    <div class="lb-table" id="lb-table"></div>
+
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/leaderboard.js"></script>
+</body>
+</html>
