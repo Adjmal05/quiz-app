@@ -1,4 +1,4 @@
-// quiz-page.js — Logique spécifique à la page quiz.html (bouton retour)
+//quiz-page.js - Logique bouton retour - développé par Minosoa
 
 document.getElementById('btn-back').addEventListener('click', (e) => {
   e.preventDefault();

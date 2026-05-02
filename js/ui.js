@@ -1,4 +1,4 @@
-// ui.js — Manipulation du DOM & helpers UI
+// javascript// ui.js - Helpers DOM et animations - développé par Minosoa
 
 const UI = {
   // ── QUERY HELPERS ────────────────────────────────────────────────────────
