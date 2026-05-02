@@ -1,4 +1,4 @@
-// storage.js — Gestion du localStorage
+// storage.js - Gestion localStorage - développé par Adjmal
 
 const Storage = {
   KEYS: {

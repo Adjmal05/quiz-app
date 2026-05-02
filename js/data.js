@@ -1,4 +1,4 @@
-// data.js — Base de données des questions
+// data.js - Questions du quiz - développé par Adjmal
 
 const QUIZ_DATA = {
   culture: {
