@@ -1,4 +1,4 @@
-// result.js — Logique de la page de résultats
+// result.js — affichage resultats - developpe par Ricardo 
 
 document.addEventListener('DOMContentLoaded', () => {
   const result = Storage.getLastResult();
