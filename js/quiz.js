@@ -1,3 +1,4 @@
+//quiz.js - Page de jeu - développé par Ritso
 // quiz.js — Logique principale du jeu (timer, score, navigation)
 
 const QuizGame = {
@@ -375,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Keyboard support
   document.addEventListener('keydown', (e) => {
-    if (['1','2','3','4'].includes(e.key)) {
+    if (['1', '2', '3', '4'].includes(e.key)) {
       const idx = parseInt(e.key) - 1;
       QuizGame.selectAnswer(idx);
     }
